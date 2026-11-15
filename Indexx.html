@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MAYNAU BARBER | Reserva tu hora · Villa Alemana</title>
+<meta name="description" content="MAYNAU BARBER: cortes degradados, tratamiento facial y visos platinados en Villa Alemana, Troncos Viejos y Huanhualí. Reserva tu hora y coordina por Instagram.">
+<meta name="theme-color" content="#0a0907">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0907;--bg2:#100e0b;--card:#15130f;--card2:#1c1914;--line:#2c271d;
+  --gold:#c9a24b;--gold2:#e8cb85;--gold3:#f7e6b0;--gold-d:#8f6a1f;
+  --text:#f5f1e6;--muted:#a59f90;--bad:#e5645c;--warn:#e9b84f;
+  --grad:linear-gradient(110deg,#8f6a1f 0%,#e8cb85 28%,#c9a24b 52%,#f7e6b0 74%,#a67c1f 100%);
+  --h:'Oswald',Impact,sans-serif;--b:'Inter',system-ui,sans-serif;--s:'Playfair Display',Georgia,serif;
+  --pad:clamp(52px,7vw,84px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:var(--b);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}[hidden]{display:none!important}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+section{padding:var(--pad) 0}
+.gold{background:var(--grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--h);letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--h);text-transform:uppercase;letter-spacing:.04em;line-height:1.08;font-weight:600}
+h2{font-size:clamp(2rem,5.4vw,3.3rem);margin:.5rem 0 .6rem}
+h2 em{font-family:var(--s);font-style:italic;font-weight:700;text-transform:none;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-head{text-align:center;max-width:680px;margin:0 auto clamp(26px,4vw,40px)}.sec-head p{color:var(--muted)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-family:var(--h);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;padding:15px 30px;border:0;background:var(--grad);background-size:200% 100%;color:#17120a;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,background-position .5s;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,162,75,.35);background-position:100% 0}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--gold2);box-shadow:inset 0 0 0 1px var(--gold);clip-path:none}
+.btn.ghost:hover{background:rgba(201,162,75,.12)}
+.btn.sm{padding:10px 20px;font-size:.78rem}.btn.full{width:100%}
+.btn:focus-visible,.opt:focus-visible,.cal button:focus-visible,.slots button:focus-visible{outline:2px solid var(--gold3);outline-offset:2px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(10,9,7,.93);backdrop-filter:blur(12px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;letter-spacing:.16em;text-decoration:none;font-size:1.12rem}
+.logo svg{width:28px;height:28px;color:var(--gold)}.logo b{color:var(--gold)}
+.links{display:flex;align-items:center;gap:26px}
+.links a:not(.btn){font-family:var(--h);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;text-decoration:none;color:#ddd7c6;position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold);transition:width .3s}
+.links a:not(.btn):hover::after{width:100%}
+.burger{display:none;background:none;border:0;color:var(--text);width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.3s}
+@media(max-width:860px){.burger{display:block}.links{position:fixed;inset:66px 0 auto 0;background:rgba(10,9,7,.98);flex-direction:column;padding:24px 20px 30px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s}.links.open{transform:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:104px 0 var(--pad);min-height:min(100svh,860px);display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(700px 480px at 82% 38%,rgba(201,162,75,.22),transparent 65%),
+  radial-gradient(600px 420px at 0% 100%,rgba(201,162,75,.12),transparent 65%),
+  linear-gradient(165deg,#17140e,#0a0907 62%)}
+.hero-bg::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(247,230,176,.028) 0 2px,transparent 2px 28px)}
+.hero-bg.photo{background-size:cover;background-position:center}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(3.3rem,10.5vw,7.6rem);letter-spacing:.05em;margin:.9rem 0 .2rem;line-height:.95}
+.hero h1 small{display:block;font-size:.4em;letter-spacing:.62em;color:var(--gold);margin-top:.35em;font-weight:500}
+.hero .tag{font-family:var(--s);font-style:italic;font-weight:700;font-size:clamp(1.35rem,3.4vw,2.1rem);color:var(--gold2);margin:14px 0 14px}
+.hero p.lead{color:#d2ccbb;max-width:520px;margin-bottom:26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+.cta-row .btn{padding:17px 34px;font-size:1.02rem}
+.hours-mini{display:flex;flex-wrap:wrap;gap:10px}
+.hours-mini span{font-family:var(--h);letter-spacing:.1em;text-transform:uppercase;font-size:.76rem;color:var(--muted);border:1px solid var(--line);padding:7px 14px;background:rgba(21,19,15,.6)}
+.hours-mini b{color:var(--gold2);font-weight:500}
+
+.emblem{position:relative;width:min(100%,430px);aspect-ratio:1/1;margin-inline:auto}
+.emblem .ring{position:absolute;inset:0;width:100%;height:100%;animation:rot 40s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.emblem .ring text{font-family:var(--h);font-size:15.5px;letter-spacing:.22em;fill:#d9bd72;text-transform:uppercase}
+.core{position:absolute;inset:15%;border-radius:50%;display:grid;place-items:center;text-align:center;
+  background:radial-gradient(circle at 35% 30%,#2a2417,#0d0b08 70%);box-shadow:0 0 0 2px var(--gold),0 0 0 8px #0a0907,0 0 0 9px rgba(201,162,75,.5),0 0 90px rgba(201,162,75,.28)}
+.core svg{width:46%;color:var(--gold2);filter:drop-shadow(0 0 14px rgba(232,203,133,.5))}
+.core .nm{font-family:var(--h);letter-spacing:.3em;font-size:clamp(.82rem,2.2vw,1.1rem);color:var(--gold2);margin-top:-14%}
+.core .nm i{display:block;font-style:normal;letter-spacing:.2em;font-size:.7em;color:var(--muted);margin-top:4px}
+.hero-vis{display:flex;flex-direction:column;align-items:center;gap:26px;width:100%}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:430px}
+.chip{background:rgba(21,19,15,.94);border:1px solid rgba(201,162,75,.55);padding:9px 14px;font-family:var(--h);letter-spacing:.08em;text-transform:uppercase;font-size:.74rem}
+.chip b{color:var(--gold2);font-weight:600}
+@media(max-width:900px){
+  .hero{padding-top:92px;min-height:0}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-txt{text-align:center}.hero p.lead{margin-inline:auto}.cta-row,.hours-mini{justify-content:center}
+  .emblem{width:min(78vw,340px)}
+  .chips{max-width:100%}.chip{font-size:.68rem;padding:8px 11px}
+}
+
+/* MARQUEE */
+.stripe{height:7px;background:repeating-linear-gradient(-45deg,#e8cb85 0 14px,#0a0907 14px 28px,#c9a24b 28px 42px,#0a0907 42px 56px)}
+.marquee{background:var(--grad);color:#17120a;overflow:hidden;white-space:nowrap;padding:11px 0}
+.marquee div{display:inline-block;animation:mq 32s linear infinite;font-family:var(--h);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:.92rem}
+.marquee span{margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SERVICES */
+#servicios{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:c}
+@media(max-width:980px){.cards{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}}
+.card{counter-increment:c;position:relative;display:flex;flex-direction:column;padding:30px 26px 26px;border:1px solid transparent;
+  background:linear-gradient(180deg,var(--card2),var(--card)) padding-box,linear-gradient(160deg,rgba(247,230,176,.75),rgba(201,162,75,.1) 42%,rgba(201,162,75,.55)) border-box;
+  transition:transform .35s,box-shadow .35s}
+.card::after{content:"0" counter(c);position:absolute;top:14px;right:20px;font-family:var(--h);font-size:3.6rem;line-height:1;color:rgba(201,162,75,.12);font-weight:700}
+.card:hover{transform:translateY(-8px);box-shadow:0 26px 54px rgba(0,0,0,.55),0 0 40px rgba(201,162,75,.12)}
+.card.feat{box-shadow:0 0 0 1px rgba(232,203,133,.25),0 20px 50px rgba(201,162,75,.08)}
+.ribbon{position:absolute;top:-1px;left:26px;background:var(--grad);color:#17120a;font-family:var(--h);font-size:.7rem;letter-spacing:.18em;padding:5px 12px;text-transform:uppercase;font-weight:600}
+.card h3{font-size:1.4rem;margin:8px 0 10px;padding-right:50px;min-height:2.2em}
+.price{font-family:var(--h);font-size:2.9rem;font-weight:600;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price small{font-size:.85rem;color:var(--muted);-webkit-text-fill-color:var(--muted);letter-spacing:.16em;margin-left:6px}
+.dur{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.88rem;margin:4px 0 16px}.dur svg{width:16px;height:16px;color:var(--gold)}
+.card ul{list-style:none;margin-bottom:22px;flex:1}
+.card li{padding:8px 0 8px 26px;border-top:1px solid var(--line);font-size:.93rem;color:#dcd6c5;position:relative}
+.card li::before{content:"✦";position:absolute;left:2px;color:var(--gold);font-size:.7rem;top:11px}
+
+/* PERKS */
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:960px){.perks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.perks{grid-template-columns:1fr}}
+.perk{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);background:var(--card);transition:.3s}
+.perk:hover{border-color:var(--gold);transform:translateY(-4px)}
+.perk .ic{flex:none;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold2);font-size:1.25rem;transform:rotate(45deg)}
+.perk .ic>*{transform:rotate(-45deg)}
+.perk h3{font-size:1rem;margin-bottom:3px;letter-spacing:.08em}.perk p{color:var(--muted);font-size:.88rem;line-height:1.45}
+#porque{padding:0 0 var(--pad);background:var(--bg)}
+
+/* BOOKING */
+#reservas{background:radial-gradient(900px 420px at 50% 0,rgba(201,162,75,.12),transparent 70%),var(--bg2);border-top:1px solid var(--line)}
+.book-grid{display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start}
+@media(max-width:1000px){.book-grid{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);padding:26px}
+@media(max-width:560px){.panel{padding:18px 14px}}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.steps .s1,.steps .s4{grid-column:1/-1}
+@media(max-width:780px){.steps{grid-template-columns:1fr}}
+.step h3{font-size:1.05rem;display:flex;align-items:center;gap:12px;margin-bottom:14px;letter-spacing:.1em}
+.step h3 .n{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--grad);color:#17120a;font-size:.9rem;flex:none;transform:rotate(45deg)}
+.step h3 .n{font-weight:700}.step h3 .n>span{display:block}
+.pick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:780px){.pick{grid-template-columns:1fr}}
+.opt{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:8px;text-align:left;width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);padding:14px 16px;cursor:pointer;font-family:var(--b);transition:.25s}
+@media(max-width:780px){.opt{flex-direction:row;align-items:center}}
+.opt:hover{border-color:rgba(201,162,75,.65)}
+.opt.sel{border-color:var(--gold);background:linear-gradient(135deg,rgba(201,162,75,.16),rgba(201,162,75,.04));box-shadow:inset 0 0 0 1px var(--gold)}
+.opt b{font-family:var(--h);letter-spacing:.05em;text-transform:uppercase;font-weight:500;display:block;font-size:.95rem;line-height:1.25}.opt small{color:var(--muted)}
+.opt .p{font-family:var(--h);color:var(--gold2);font-size:1.2rem;white-space:nowrap}
+.cal-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.cal-h button,.cal-h select{background:var(--bg);border:1px solid var(--line);color:var(--text);height:40px;cursor:pointer;font:inherit;border-radius:0}
+.cal-h button{width:40px;font-size:1.1rem;transition:.2s;flex:none}.cal-h button:hover:not(:disabled){border-color:var(--gold);color:var(--gold)}.cal-h button:disabled{opacity:.3;cursor:not-allowed}
+.cal-h .sel2{display:flex;gap:6px;flex:1;min-width:0}.cal-h select{padding:0 6px;font-family:var(--h);letter-spacing:.06em;text-transform:uppercase;flex:1;min-width:0}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal .dw{text-align:center;font-family:var(--h);font-size:.72rem;letter-spacing:.1em;color:var(--muted);padding:4px 0}
+.cal button{aspect-ratio:1/1;min-height:38px;background:var(--bg);border:1px solid var(--line);color:var(--text);cursor:pointer;font-family:var(--b);font-size:.95rem;transition:.2s}
+.cal button:hover:not(:disabled){border-color:var(--gold);color:var(--gold2)}
+.cal button.sel{background:var(--grad);color:#17120a;border-color:var(--gold);font-weight:700}
+.cal button.today{box-shadow:inset 0 0 0 1px rgba(201,162,75,.7)}
+.cal button:disabled{opacity:.25;cursor:not-allowed;background:transparent}.cal .e{visibility:hidden}
+.hint{color:var(--muted);font-size:.84rem;margin-top:10px;line-height:1.45}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.slots button{background:var(--bg);border:1px solid var(--line);color:var(--text);padding:11px 0;cursor:pointer;font-family:var(--h);letter-spacing:.08em;font-size:1rem;transition:.2s}
+.slots button:hover{border-color:var(--gold);color:var(--gold2)}.slots button.sel{background:var(--grad);color:#17120a;border-color:var(--gold);font-weight:600}
+.empty{color:var(--muted);padding:22px 14px;border:1px dashed var(--line);text-align:center;font-size:.92rem;background:rgba(201,162,75,.03)}
+.s3 #slots{min-height:100px}
+.form2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}@media(max-width:620px){.form2{grid-template-columns:1fr}}
+.fld{margin-bottom:6px}.fld label{display:block;font-family:var(--h);text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:var(--muted);margin-bottom:6px}
+.fld input{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);padding:13px 14px;font:inherit;font-size:1rem;border-radius:0}
+.fld input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,75,.15)}
+.fld .err{color:var(--bad);font-size:.8rem;min-height:1.1em;margin-top:3px}
+.ig-in{display:flex}.ig-in span{display:grid;place-items:center;padding:0 14px;background:var(--card2);border:1px solid var(--line);border-right:0;color:var(--gold)}
+.summary{position:sticky;top:84px;border-color:rgba(201,162,75,.45);background:linear-gradient(180deg,var(--card2),var(--card))}
+@media(max-width:1000px){.summary{position:static}}
+.summary h3{font-size:1.05rem;margin-bottom:12px;letter-spacing:.12em}
+.sum-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.sum-row span{color:var(--muted)}.sum-row b{text-align:right;font-weight:500}
+.sum-total{border:0}.sum-total b{font-family:var(--h);font-size:1.7rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.summary .btn{margin-top:14px}
+.note{font-size:.8rem;color:var(--muted);margin-top:12px;line-height:1.45}
+.warn{border:1px solid var(--warn);background:rgba(233,184,79,.08);color:#f2d9a0;padding:14px 16px;margin-bottom:20px;font-size:.92rem}
+.formerr{border:1px solid var(--bad);background:rgba(229,100,92,.08);color:#f3b1ac;padding:11px 13px;margin-top:12px;font-size:.88rem}
+.done{max-width:660px;margin:0 auto;text-align:center;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--gold);padding:38px 24px;box-shadow:0 0 70px rgba(201,162,75,.15)}
+.done .ok{width:70px;height:70px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;color:var(--gold2);font-size:2rem}
+.done h2{font-size:clamp(1.6rem,5vw,2.3rem);margin-top:0}.done p{color:#d6d0bf;margin:10px 0}
+.done pre{text-align:left;white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);padding:14px 16px;margin:18px 0;font:.9rem/1.6 var(--b);color:#e9e4d4}
+.badge{display:inline-block;padding:4px 12px;font-family:var(--h);letter-spacing:.12em;font-size:.72rem;text-transform:uppercase;border:1px solid var(--warn);color:var(--warn)}
+.done .btn{padding:13px 22px;font-size:.82rem}
+
+/* LOCATION */
+#ubicacion{padding-top:var(--pad)}
+.loc{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
+@media(max-width:860px){.loc{grid-template-columns:1fr}}
+.loc-card{background:var(--card);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:center}
+.zones{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 20px}
+.zones span{border:1px solid var(--gold);color:var(--gold2);padding:8px 16px;font-family:var(--h);letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;background:rgba(201,162,75,.06)}
+.zones span::before{content:"📍 "}
+.box{border-left:3px solid var(--gold);padding:6px 0 6px 18px;font-family:var(--s);font-style:italic;font-size:1.12rem;color:#ebe6d6}
+.hours h3{margin-bottom:10px;letter-spacing:.14em}
+.hours div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.hours div:last-of-type{border:0}.hours span{color:var(--muted)}
+.hours b{font-family:var(--h);letter-spacing:.06em;font-weight:500}.hours .closed{color:var(--bad)}
+
+/* REDES */
+#redes{padding:0 0 var(--pad)}
+.social{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:820px){.social{grid-template-columns:1fr}}
+.soc{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(30px,5vw,46px) 22px;border:1px solid var(--gold);transition:transform .35s,box-shadow .35s;
+  background:radial-gradient(420px 220px at 15% 0,rgba(201,162,75,.2),transparent 70%),radial-gradient(420px 220px at 90% 100%,rgba(201,162,75,.14),transparent 70%),linear-gradient(180deg,#17140e,#0d0b08)}
+.soc:hover{transform:translateY(-6px);box-shadow:0 24px 54px rgba(0,0,0,.5),0 0 44px rgba(201,162,75,.14)}
+.soc .logo-ic{width:66px;height:66px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold2);transform:rotate(45deg);margin:6px 0 24px;background:rgba(201,162,75,.07)}
+.soc .logo-ic svg{width:30px;height:30px;transform:rotate(-45deg)}
+.soc h2{font-size:clamp(1.5rem,3.6vw,2.1rem);margin:.5rem 0 .5rem}
+.soc p{color:var(--muted);max-width:420px;margin:0 auto 14px;font-size:.95rem}
+.soc .handle{font-family:var(--h);letter-spacing:.2em;font-size:1.1rem;margin-bottom:12px}
+.soc .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
+.soc .tags span{border:1px solid var(--line);background:rgba(21,19,15,.7);padding:5px 12px;font-family:var(--h);letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;color:var(--gold2)}
+.soc .btn{margin-top:auto;padding:16px 28px;font-size:.95rem}
+.soc .btn svg{width:20px;height:20px;flex:none}
+@media(max-width:480px){.soc .btn{padding:15px 14px;font-size:.82rem;letter-spacing:.09em;width:100%}}
+footer{padding:26px 0 30px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.84rem}
+footer b{font-family:var(--h);letter-spacing:.18em}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,40px);background:var(--card2);border:1px solid var(--gold);color:var(--text);padding:13px 22px;z-index:99;opacity:0;pointer-events:none;transition:.35s;max-width:90vw;font-size:.92rem}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* CTA móvil fijo */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,9,7,.96);backdrop-filter:blur(10px);border-top:1px solid var(--gold);transition:transform .3s}
+.sticky.hide{transform:translateY(110%)}
+.sticky .btn{flex:1;padding:13px 10px;font-size:.88rem}
+@media(max-width:700px){.sticky{display:flex}body{padding-bottom:70px}.toast{bottom:84px}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap nav-in">
+  <a href="#inicio" class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6 20 18M8.6 16.4 20 6"/></svg>MAYNAU <b>BARBER</b></a>
+  <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <div class="links" id="links"><a href="#servicios">Servicios</a><a href="#ubicacion">Atención</a><a href="#redes">Redes</a><a href="#reservas" class="btn sm">Reservar</a></div>
+</div></nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <span class="eyebrow">Barbería · Villa Alemana</span>
+      <h1><span class="gold">MAYNAU</span><small>BARBER</small></h1>
+      <p class="tag">Te ayudo a alcanzar tu mejor versión.</p>
+      <p class="lead">Degradados limpios, detalles precisos y atención personalizada. Trabajamos con técnica y estilo urbano para que salgas con el corte que querías.</p>
+      <div class="cta-row">
+        <a href="#reservas" class="btn">RESERVAR MI HORA</a>
+        <a href="#servicios" class="btn ghost">Ver servicios</a>
+      </div>
+      <div class="hours-mini"><span><b>Mar–Vie</b> 16:00–21:00</span><span><b>Sáb–Dom</b> 12:00–20:00</span><span><b>Lun</b> cerrado</span></div>
+    </div>
+    <div class="hero-vis">
+    <div class="emblem" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 300 300"><defs><path id="circ" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/></defs>
+        <text><textPath href="#circ" textLength="738" lengthAdjust="spacing">MAYNAU BARBER • DEGRADADOS • VISOS PLATINADOS • TRATAMIENTO FACIAL •</textPath></text></svg>
+      <div class="core">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6 20 18M8.6 16.4 20 6"/></svg>
+        <div class="nm">MAYNAU<i>@maynau.barber</i></div>
+      </div>
+    </div>
+    <div class="chips">
+      <div class="chip"><b>⭐ +100</b> clientes frecuentes</div>
+      <div class="chip">📍 Troncos Viejos · Villa Alemana</div>
+      <div class="chip">Degradados desde <b>$8.000</b></div>
+    </div>
+    </div>
+  </div>
+</header>
+
+<div class="stripe"></div>
+<div class="marquee" aria-hidden="true"><div>
+  <span>Degradados</span>✦<span>Visos platinados</span>✦<span>Tratamiento facial</span>✦<span>Perfilado de cejas</span>✦<span>Diseños a elección</span>✦<span>Degradados</span>✦<span>Visos platinados</span>✦<span>Tratamiento facial</span>✦<span>Perfilado de cejas</span>✦<span>Diseños a elección</span>✦
+  <span>Degradados</span>✦<span>Visos platinados</span>✦<span>Tratamiento facial</span>✦<span>Perfilado de cejas</span>✦<span>Diseños a elección</span>✦<span>Degradados</span>✦<span>Visos platinados</span>✦<span>Tratamiento facial</span>✦<span>Perfilado de cejas</span>✦<span>Diseños a elección</span>✦
+</div></div>
+<div class="stripe"></div>
+
+<section id="servicios"><div class="wrap">
+  <div class="sec-head rv"><span class="eyebrow">Servicios y precios</span><h2>Elige tu <em>estilo</em></h2><p>Precios en pesos chilenos (CLP). La duración es estimada y puede variar según el diseño elegido.</p></div>
+  <div class="cards" id="svcCards"></div>
+</div></section>
+
+<section id="porque"><div class="wrap perks">
+  <div class="perk rv"><div class="ic"><span>✂</span></div><div><h3>Degradados precisos</h3><p>Transiciones limpias y perfilado a tu medida.</p></div></div>
+  <div class="perk rv"><div class="ic"><span>⚡</span></div><div><h3>Reserva en minutos</h3><p>Elige día y hora y envía tu solicitud por Instagram.</p></div></div>
+  <div class="perk rv"><div class="ic"><span>★</span></div><div><h3>+100 clientes frecuentes</h3><p>Atención personalizada que hace volver.</p></div></div>
+  <div class="perk rv"><div class="ic"><span>✦</span></div><div><h3>Cuidado facial</h3><p>Tratamiento anti puntos negros con tu corte.</p></div></div>
+</div></section>
+
+<section id="reservas"><div class="wrap">
+  <div class="sec-head rv"><span class="eyebrow">Reserva por Instagram</span><h2>Reserva tu <em>hora</em></h2>
+    <p>Elige servicio, día y hora. Al enviar, se abre el Instagram de MAYNAU BARBER y tu solicitud queda copiada lista para pegar en el mensaje.</p></div>
+  <div class="warn" id="cfgWarn" hidden>Falta configurar el usuario de Instagram: abre este archivo y completa <b>INSTAGRAM_USER</b> en el bloque CONFIG (usuario exacto, sin @ ni espacios).</div>
+
+  <div id="bookingFlow" class="book-grid">
+    <div class="panel"><div class="steps">
+      <div class="step s1"><h3><span class="n"><span style="transform:rotate(-45deg)">1</span></span>Elige tu servicio</h3><div class="pick" id="svcPick"></div></div>
+      <div class="step s2"><h3><span class="n"><span style="transform:rotate(-45deg)">2</span></span>Elige el día</h3>
+        <div class="cal-h"><button type="button" id="prevM" aria-label="Mes anterior">‹</button>
+          <div class="sel2"><select id="selM" aria-label="Mes"></select><select id="selY" aria-label="Año"></select></div>
+          <button type="button" id="nextM" aria-label="Mes siguiente">›</button></div>
+        <div class="cal" id="cal"></div>
+        <p class="hint">Puedes agendar cualquier día futuro, de cualquier mes y año. Atendemos de martes a domingo.</p></div>
+      <div class="step s3"><h3><span class="n"><span style="transform:rotate(-45deg)">3</span></span>Elige la hora</h3><div id="slots"><div class="empty">Primero elige un servicio y un día.</div></div></div>
+      <div class="step s4"><h3><span class="n"><span style="transform:rotate(-45deg)">4</span></span>Tus datos</h3>
+        <form id="bookForm" novalidate autocomplete="off"><div class="form2">
+          <div class="fld"><label for="fName">Nombre</label><input id="fName" maxlength="60" placeholder="Tu nombre" autocomplete="name"><div class="err" id="eName"></div></div>
+          <div class="fld"><label for="fIg">Tu usuario de Instagram</label><div class="ig-in"><span>@</span><input id="fIg" maxlength="31" placeholder="tu.usuario" autocapitalize="none" autocorrect="off" spellcheck="false"></div><div class="err" id="eIg"></div></div>
+        </div></form></div>
+    </div></div>
+    <aside class="panel summary">
+      <h3>Resumen de tu reserva</h3>
+      <div class="sum-row"><span>Servicio</span><b id="sSvc">—</b></div>
+      <div class="sum-row"><span>Fecha</span><b id="sDate">—</b></div>
+      <div class="sum-row"><span>Hora</span><b id="sTime">—</b></div>
+      <div class="sum-row"><span>Duración</span><b id="sDur">—</b></div>
+      <div class="sum-row sum-total"><span>Precio</span><b id="sPrice">—</b></div>
+      <a class="btn full" id="sendBtn" href="#" rel="noopener">ENVIAR RESERVA POR INSTAGRAM</a>
+      <div class="formerr" id="formErr" hidden></div>
+      <p class="note">Se abrirá el Instagram de MAYNAU BARBER: toca <b>Mensaje</b>, pega tu solicitud (queda copiada) y envíala. Tu hora queda <b>solicitada</b> hasta que la confirmemos por mensaje.</p>
+    </aside>
+  </div>
+
+  <div class="done" id="doneBox" hidden>
+    <div class="ok">✓</div>
+    <h2>¡TU HORA HA SIDO SOLICITADA!</h2>
+    <p>Para terminar: en el Instagram que se abrió toca <b>Mensaje</b>, <b>pega y envía este texto</b> (ya está copiado). Nos comunicaremos contigo por Instagram para confirmar los detalles y enviarte la ubicación.</p>
+    <pre id="doneMsg"></pre>
+    <p id="openHint" style="color:var(--warn);font-size:.9rem" hidden>Tu navegador no abrió Instagram automáticamente: usa el botón dorado de abajo.</p>
+    <span class="badge">Estado: solicitada · pendiente de confirmación</span>
+    <div style="margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn igLink" href="#" target="_blank" rel="noopener">1 · Abrir Instagram</a>
+      <button class="btn ghost" id="copyBtn" type="button">2 · Copiar mensaje</button>
+      
+      <button class="btn ghost" id="newBook" type="button">Hacer otra reserva</button>
+    </div>
+  </div>
+</div></section>
+
+<section id="ubicacion"><div class="wrap loc">
+  <div class="loc-card rv"><span class="eyebrow" style="align-self:flex-start">Dónde atendemos</span><h2 style="margin-bottom:0">Zona de <em>atención</em></h2>
+    <div class="zones"><span>Troncos Viejos</span><span>Huanhualí</span><span>Villa Alemana</span></div>
+    <div class="box">Una vez confirmada tu reserva, nos comunicaremos contigo por Instagram para coordinar y enviarte la ubicación de atención.</div></div>
+  <div class="loc-card hours rv"><h3>Horarios de atención</h3>
+    <div><span>Lunes</span><b class="closed">Cerrado</b></div><div><span>Martes a viernes</span><b>16:00 – 21:00</b></div><div><span>Sábado y domingo</span><b>12:00 – 20:00</b></div>
+    <p class="note">Hora de Chile (America/Santiago).</p></div>
+</div></section>
+
+<section id="redes"><div class="wrap">
+  <div class="sec-head rv" style="margin-bottom:26px"><span class="eyebrow">Mira nuestro trabajo</span><h2>Cortes y videos en <em>redes</em></h2></div>
+  <div class="social">
+    <div class="soc rv">
+      <div class="logo-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></div>
+      <span class="eyebrow">Instagram</span>
+      <h2>Cortes y <em>reservas</em></h2>
+      <p>Mira nuestros cortes en el perfil y envíanos tu solicitud por mensaje privado (botón «Mensaje»).</p>
+      <div class="handle gold">@maynau.barber</div>
+      <div class="tags"><span>Cortes</span><span>Reservas</span><span>Mensajes</span></div>
+      <a class="btn igbtn igLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>VISÍTANOS EN INSTAGRAM</a>
+    </div>
+    <div class="soc rv" style="transition-delay:.12s">
+      <div class="logo-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.2v13.1a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.2a6 6 0 1 0 5.1 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8A4.3 4.3 0 0 1 16.6 2z"/></svg></div>
+      <span class="eyebrow">TikTok</span>
+      <h2>Videos y <em>contenido</em></h2>
+      <p>Mira los videos de la barbería: cortes, transformaciones y el día a día. Todo el contenido está en nuestro TikTok.</p>
+      <div class="handle gold">@maynau.barber</div>
+      <div class="tags"><span>Videos</span><span>Transformaciones</span><span>Día a día</span></div>
+      <a class="btn igbtn ttLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.2v13.1a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.2a6 6 0 1 0 5.1 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8A4.3 4.3 0 0 1 16.6 2z"/></svg>VER NUESTRO TIKTOK</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b class="gold">MAYNAU BARBER</b><br>Troncos Viejos · Huanhualí · Villa Alemana · Chile<br><small style="opacity:.45">v9</small></div></footer>
+
+<div class="sticky" id="stickyCta"><a href="#reservas" class="btn">Reservar mi hora</a><a class="btn ghost igLink" href="#" target="_blank" rel="noopener">Instagram</a></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+
+/* ============ CONFIGURACIÓN — edita solo este bloque ============ */
+window.addEventListener('error',e=>{try{document.getElementById('toast').textContent='Error: '+e.message;document.getElementById('toast').classList.add('show')}catch(_){}});
+const CONFIG = {
+  TIKTOK_USER: 'maynau.barber',   // usuario de TikTok, sin @
+  INSTAGRAM_USER: 'maynau.barber',          // usuario EXACTO de Instagram, sin @ ni espacios. Ej: 'maynau.barber'
+  HERO_IMAGE: '',              // foto de fondo opcional. Ej: 'img/portada.jpg'
+  TIMEZONE: 'America/Santiago',
+  SLOT_STEP: 30,               // cada cuántos minutos se ofrece una hora (15, 30, 60)
+  MIN_NOTICE: 30,              // minutos mínimos de anticipación el mismo día
+  LAST_YEAR: 2100,             // último año disponible en el calendario
+  // dow: 0=domingo ... 6=sábado. Minutos desde medianoche. null = cerrado
+  HOURS: { 0:[720,1200], 1:null, 2:[960,1260], 3:[960,1260], 4:[960,1260], 5:[960,1260], 6:[720,1200] },
+  // duration_min = minutos que dura el servicio para calcular el término. Modifícalos aquí.
+  SERVICES: [
+    {id:'corte-degradado',name:'Corte degradado',price_clp:8000,duration_min:45,duration_label:'40-45 minutos',includes:['Corte de pelo degradado','Perfilado de cejas opcional','Diseño a elección opcional']},
+    {id:'corte-tratamiento-facial',name:'Corte degradado + tratamiento facial',price_clp:10000,duration_min:60,duration_label:'55-60 minutos',includes:['Corte de pelo degradado','Perfilado de cejas opcional','Diseño a elección opcional','Tratamiento anti puntos negros']},
+    {id:'visos-platinados',name:'Visos platinados',price_clp:30000,duration_min:150,duration_label:'2-3 horas',includes:['Visos platinados','Corte degradado']}
+  ]
+};
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clp=n=>'$'+String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+const pad=n=>String(n).padStart(2,'0');
+const minStr=m=>pad(Math.floor(m/60))+':'+pad(m%60);
+const MONTHS=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+const DAYS=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+const ymd=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
+const dowOf=ds=>new Date(ds+'T00:00:00Z').getUTCDay();
+const fmtLong=ds=>{const d=new Date(ds+'T00:00:00Z');return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()} de ${MONTHS[d.getUTCMonth()].toLowerCase()} de ${d.getUTCFullYear()}`};
+const hoursFor=ds=>CONFIG.HOURS[dowOf(ds)]||null;
+function chileNow(){
+  const p=new Intl.DateTimeFormat('en-CA',{timeZone:CONFIG.TIMEZONE,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+  const g=t=>+p.find(x=>x.type===t).value;
+  return {date:`${g('year')}-${pad(g('month'))}-${pad(g('day'))}`,min:g('hour')*60+g('minute'),y:g('year'),m:g('month')-1};
+}
+let toastT;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),3800)}
+
+/* ---- Instagram ---- */
+const IG=(CONFIG.INSTAGRAM_USER||'').replace(/^@+/,'').trim();
+const igUrl=IG?`https://www.instagram.com/${encodeURIComponent(IG)}/`:'#';  // perfil: carga siempre y abre la app en celular
+if(!IG) $('#cfgWarn').hidden=false;
+$$('.igLink').forEach(a=>{a.href=igUrl;a.addEventListener('click',e=>{if(!IG){e.preventDefault();toast('Falta configurar INSTAGRAM_USER en el archivo.')}})});
+const TT=(CONFIG.TIKTOK_USER||'').replace(/^@+/,'').trim();
+$$('.ttLink').forEach(a=>{a.href=TT?`https://www.tiktok.com/@${encodeURIComponent(TT)}`:'#';a.addEventListener('click',e=>{if(!TT){e.preventDefault();toast('Falta configurar TIKTOK_USER en el archivo.')}})});
+$$('.igProfile').forEach(a=>{a.href=IG?`https://www.instagram.com/${encodeURIComponent(IG)}/`:'#';a.addEventListener('click',e=>{if(!IG){e.preventDefault();toast('Falta configurar INSTAGRAM_USER en el archivo.')}})});
+if(CONFIG.HERO_IMAGE){const h=$('#heroBg');h.style.backgroundImage=`url("${CONFIG.HERO_IMAGE.replace(/"/g,'%22')}")`;h.classList.add('photo')}
+
+/* ---- UI general ---- */
+addEventListener('scroll',()=>$('#nav').classList.toggle('solid',scrollY>30),{passive:true});
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+const observe=()=>$$('.rv:not(.in)').forEach(el=>io.observe(el));
+
+const now0=chileNow();
+const state={svc:null,y:now0.y,m:now0.m,date:null,time:null};
+
+/* ---- servicios ---- */
+$('#svcCards').innerHTML=CONFIG.SERVICES.map((s,i)=>`
+  <article class="card rv ${i===1?'feat':''}" style="transition-delay:${i*90}ms">
+    ${i===1?'<span class="ribbon">Popular</span>':''}
+    <h3>${esc(s.name)}</h3>
+    <div class="price">${clp(s.price_clp)}<small>CLP</small></div>
+    <div class="dur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Duración estimada: ${esc(s.duration_label)}</div>
+    <ul>${s.includes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+    <button class="btn full" data-svc="${esc(s.id)}" type="button">RESERVAR ESTE SERVICIO</button>
+  </article>`).join('');
+$('#svcPick').innerHTML=CONFIG.SERVICES.map(s=>`<button type="button" class="opt" data-id="${esc(s.id)}"><span><b>${esc(s.name)}</b><small>${esc(s.duration_label)}</small></span><span class="p">${clp(s.price_clp)}</span></button>`).join('');
+$$('#svcCards [data-svc]').forEach(b=>b.onclick=()=>{selectService(b.dataset.svc);$('#reservas').scrollIntoView({behavior:'smooth'})});
+$$('#svcPick .opt').forEach(b=>b.onclick=()=>selectService(b.dataset.id));
+function selectService(id){
+  state.svc=CONFIG.SERVICES.find(s=>s.id===id)||null;state.time=null;
+  $$('#svcPick .opt').forEach(b=>b.classList.toggle('sel',!!state.svc&&b.dataset.id===state.svc.id));
+  renderSlots();renderSummary();
+}
+
+/* ---- calendario: cualquier mes y año hasta LAST_YEAR ---- */
+$('#selM').innerHTML=MONTHS.map((m,i)=>`<option value="${i}">${m}</option>`).join('');
+$('#selY').innerHTML=Array.from({length:CONFIG.LAST_YEAR-now0.y+1},(_,i)=>`<option>${now0.y+i}</option>`).join('');
+function slotsFor(ds,svc){
+  const h=hoursFor(ds);if(!h||!svc)return[];
+  const now=chileNow();if(ds<now.date)return[];
+  const out=[];
+  for(let t=h[0];t+svc.duration_min<=h[1];t+=CONFIG.SLOT_STEP){
+    if(ds===now.date&&t<now.min+CONFIG.MIN_NOTICE)continue;
+    out.push(t);
+  }
+  return out;
+}
+function renderCal(){
+  const {y,m}=state,now=chileNow();
+  $('#selM').value=m;$('#selY').value=y;
+  $('#prevM').disabled=(y*12+m)<=(now.y*12+now.m);
+  $('#nextM').disabled=(y*12+m)>=(CONFIG.LAST_YEAR*12+11);
+  const first=new Date(Date.UTC(y,m,1)).getUTCDay(),lead=(first+6)%7,days=new Date(Date.UTC(y,m+1,0)).getUTCDate();
+  let html=['L','M','M','J','V','S','D'].map(d=>`<div class="dw">${d}</div>`).join('')+'<span class="e"></span>'.repeat(lead);
+  for(let d=1;d<=days;d++){
+    const ds=ymd(y,m,d);
+    const dis=!hoursFor(ds)||ds<now.date||(state.svc&&ds===now.date&&slotsFor(ds,state.svc).length===0);
+    html+=`<button type="button" data-d="${ds}" class="${ds===state.date?'sel':''} ${ds===now.date?'today':''}" ${dis?'disabled':''}>${d}</button>`;
+  }
+  $('#cal').innerHTML=html;
+  $$('#cal [data-d]').forEach(b=>b.onclick=()=>{state.date=b.dataset.d;state.time=null;renderCal();renderSlots();renderSummary()});
+}
+function goto(y,m){
+  const min=now0.y*12+now0.m,v=Math.min(Math.max(y*12+m,min),CONFIG.LAST_YEAR*12+11);
+  state.y=Math.floor(v/12);state.m=v%12;renderCal();
+}
+$('#prevM').onclick=()=>goto(state.y,state.m-1);$('#nextM').onclick=()=>goto(state.y,state.m+1);
+$('#selM').onchange=e=>goto(state.y,+e.target.value);$('#selY').onchange=e=>goto(+e.target.value,state.m);
+
+function renderSlots(){
+  const box=$('#slots');
+  if(!state.svc||!state.date){box.innerHTML=`<div class="empty">${!state.svc?'Primero elige un servicio.':'Ahora elige un día en el calendario.'}</div>`;return}
+  const s=slotsFor(state.date,state.svc);
+  if(!s.length){box.innerHTML='<div class="empty">No quedan horarios ese día para este servicio. Prueba con otra fecha.</div>';return}
+  box.innerHTML=`<div class="slots">${s.map(t=>`<button type="button" data-t="${t}" class="${t===state.time?'sel':''}">${minStr(t)}</button>`).join('')}</div>
+  <p class="hint">Solo se muestran horas que permiten terminar el servicio antes del cierre. La disponibilidad final la confirmamos por Instagram.</p>`;
+  $$('#slots [data-t]').forEach(b=>b.onclick=()=>{state.time=+b.dataset.t;renderSlots();renderSummary()});
+}
+function renderSummary(){
+  const s=state.svc;
+  $('#sSvc').textContent=s?s.name:'—';
+  $('#sDate').textContent=state.date?fmtLong(state.date):'—';
+  $('#sTime').textContent=state.time!=null&&s?`${minStr(state.time)} a ${minStr(state.time+s.duration_min)}`:'—';
+  $('#sDur').textContent=s?s.duration_label:'—';
+  $('#sPrice').textContent=s?clp(s.price_clp):'—';
+}
+function showErr(m){const e=$('#formErr');e.textContent=m;e.hidden=!m}
+
+/* ---- enviar a Instagram ---- */
+let lastMsg='';
+function copySync(t){
+  const ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');
+  ta.style.cssText='position:fixed;top:0;left:0;opacity:0;font-size:16px';
+  document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,t.length);
+  let ok=false;try{ok=document.execCommand('copy')}catch(_){}ta.remove();return ok;
+}
+async function copyText(t){
+  if(copySync(t))return true;
+  try{await Promise.race([navigator.clipboard.writeText(t),new Promise((_,rej)=>setTimeout(rej,1500))]);return true}catch(_){return false}
+}
+function send(ev){
+  showErr('');
+  const name=$('#fName').value.trim().replace(/\s+/g,' ');
+  const ig=$('#fIg').value.trim().replace(/^@+/,'');
+  let ok=true;$('#eName').textContent='';$('#eIg').textContent='';
+  const falta=[];
+  if(!state.svc)falta.push('un servicio');else if(!state.date)falta.push('un día');else if(state.time==null)falta.push('una hora');
+  if(name.length<2||name.length>60){$('#eName').textContent='Escribe tu nombre (2 a 60 caracteres).';falta.push('tu nombre')}
+  if(!/^[A-Za-z0-9._]{1,30}$/.test(ig)){$('#eIg').textContent='Usuario inválido. Solo letras, números, punto y guion bajo.';falta.push('tu usuario de Instagram')}
+  if(falta.length){ev.preventDefault();showErr('Falta: '+falta.join(', ')+'.');toast('Falta: '+falta.join(', '));return}
+  if(!IG){ev.preventDefault();showErr('El Instagram de la barbería aún no está configurado en este archivo.');return}
+  const s=state.svc;
+  lastMsg=`NUEVA RESERVA\n\nCliente: ${name}\nInstagram: @${ig}\nServicio: ${s.name}\nFecha: ${fmtLong(state.date)}\nHora: ${minStr(state.time)}\nTérmino estimado: ${minStr(state.time+s.duration_min)}\nPrecio: ${clp(s.price_clp)}`;
+  const copied=copySync(lastMsg);                      // respaldo: copia inmediata
+  $('#doneMsg').textContent=lastMsg;
+  $('#bookingFlow').hidden=true;$('#doneBox').hidden=false;
+  $('#openHint').hidden=true;
+  toast(copied?'Mensaje copiado: toca «Mensaje» en Instagram y pégalo':'Copia el mensaje de la pantalla y envíalo por Instagram');
+  /* sin preventDefault: el enlace abre Instagram por sí solo */
+}
+const sendBtn=$('#sendBtn');sendBtn.href=igUrl;   // perfil de Instagram de la barbería
+sendBtn.target=matchMedia('(pointer:coarse)').matches?'_self':'_blank';   // celular: misma pestaña; computador: pestaña nueva
+sendBtn.addEventListener('click',send);
+$('#bookForm').addEventListener('submit',e=>{e.preventDefault();sendBtn.click()});
+$('#copyBtn').onclick=async()=>toast(await copyText(lastMsg)?'Mensaje copiado':'No se pudo copiar; selecciónalo manualmente');
+$('#newBook').onclick=()=>{$('#doneBox').hidden=true;$('#bookingFlow').hidden=false;$('#bookForm').reset();state.date=null;state.time=null;renderCal();renderSlots();renderSummary()};
+
+renderCal();renderSlots();renderSummary();observe();
+
+/* CTA fijo en móvil: se oculta al llegar a la sección de reservas */
+new IntersectionObserver(es=>es.forEach(e=>$('#stickyCta').classList.toggle('hide',e.isIntersecting)),{threshold:.05}).observe($('#reservas'));
+
+</script>
+</body>
+</html>
